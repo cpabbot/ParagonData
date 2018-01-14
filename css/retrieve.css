@@ -1,0 +1,98 @@
+body {
+    background-color: rgba(0,0,0,0);
+    padding-top: 20px;
+    height: calc(100% - 50px); /* exclude margin */
+    width: 100%;
+}
+
+div.sponsor-cell {
+    background-color: #FFF;
+    width: calc(100% - 250px); /* exclude padding + margin */
+    padding: 15px 25px;
+    position: relative;
+    margin: 20px 100px 45px 100px;
+}
+
+.beneath-card {
+    background-color: rgba(36,145,215,.7); /*rgb(66,165,245)*/
+    width: calc(100% - 50px);
+    height: 30px;
+    position: absolute;
+    top: 57px;
+    text-align: center;
+
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.beneath-card a {
+    background: none;
+    display: inline-block;
+    outline: none;
+    border: 2px solid #FFF;
+    cursor: pointer;
+    color: #FFF;
+    font-size: .9em;
+    font-weight: 500;
+    margin: 0px 10px;
+    height: 20px;
+    margin-top: 4px;
+    padding: 0px 13px;
+    transition: 0s background-color border-color;
+    font-family: 'Roboto', sans-serif;
+}
+
+.beneath-card a:hover {
+    background-color: #FFD54F;
+    color: #555;
+    border-color: #FFD54F;
+    transition-duration: .12s;
+}
+
+div.sponsor-cell span {
+    height: 100%;
+    font-size: 1.4em;
+    color: rgba(0,0,0,.75);
+}
+
+div.right-in-cell {
+    position: absolute;
+    /*height: 100%;*/
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    right: 25px;
+    top: 0;
+}
+
+div.right-in-cell span#year {
+    font-size: 1.2em;
+}
+
+div.right-in-cell span#total-donated {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+}
+
+div.right-in-cell img {
+    opacity: .8;
+}
+
+div.right-in-cell img:hover {
+    opacity: 1;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0,0,0,.75);
+}
+
+.card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+    box-shadow: 0 5px 7px rgba(0,0,0,0.25), 0 2px 3px rgba(0,0,0,0.22);
+}

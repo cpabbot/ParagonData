@@ -1,0 +1,21 @@
+AddType application/octet-stream .csv
+AddType application/octet-stream .xls
+AddType application/octet-stream .doc
+AddType application/octet-stream .avi
+AddType application/octet-stream .mpg
+AddType application/octet-stream .mov
+AddType application/octet-stream .pdf
+
+# HTID:2119827: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+AuthType Basic
+AuthName "Restricted Access"
+AuthUserFile "/storage/ssd2/450/628450/public_html/.htpasswd"
+Require user user
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:2119827:
+
+# HTID:2119835: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+AuthType Basic
+AuthName "Restricted Access"
+AuthUserFile "/storage/ssd2/450/628450/public_html/.htpasswd"
+Require user paragon
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:2119835:

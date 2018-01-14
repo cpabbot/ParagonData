@@ -1,0 +1,137 @@
+/******************************************************
+
+Stylesheet for action button
+--- used on all main pages to input data
+--- Code from Captain Anonymous
+    https://codepen.io/anon/pen/wgPQZG
+
+*******************************************************/
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.floaty {
+  position: absolute;
+  bottom: 20px;
+  right: 18px;
+}
+.floaty-list {
+  margin: 0 0 20px;
+  padding: 0 0 0 6px;
+  list-style: none;
+  opacity: 0;
+  transition: opacity .2s ease-out;
+}
+.floaty:hover .floaty-list {
+  opacity: 1;
+}
+.floaty-list-item {
+    height: 49px;
+    width: 49px;
+  position: relative;
+  margin: 15px 0;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,.25);
+}
+.floaty-list-item > img {
+  border-radius: 50%;
+}
+li#new-student {
+  background-color: #DB4437;
+}
+li#new-sponsor {
+    background-color: #DB4437;
+}
+.floaty-list-item-label {
+  position: absolute;
+  top: 8px;
+  right: 120%;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #424242;
+  border-radius: 2px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity .2s ease-out;
+}
+.floaty-list-item:hover > .floaty-list-item-label {
+  opacity: 1;
+}
+.floaty-btn {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+  background-color: #ff9800;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,.25);
+}
+.floaty-btn:hover .floaty-btn-label {
+  opacity: 1;
+}
+.floaty-btn-label {
+  position: absolute;
+  top: 14px;
+  right: 115%;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #424242;
+  border-radius: 2px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity .2s ease-out;
+}
+.floaty-btn-icon {
+  transition: all .2s;
+}
+.floaty-btn-icon-plus {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.floaty.is-active .floaty-btn-icon-plus {
+  opacity: 0;
+  -webkit-transform: rotate(130deg);
+  transform: rotate(130deg);
+}
+.floaty-btn-icon-create {
+  opacity: 0;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.floaty.is-active .floaty-btn-icon-create {
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.floaty-btn-download {
+    background-color: #777 !important;
+}
+
+.floaty-btn-download--detailed {
+    display: inline-block;
+    position: relative;
+    top: -40px;
+    right: -60px;
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.floaty-btn-download--fixed {
+    position: fixed !important;
+    right: 10px;
+    top: 20px;
+}

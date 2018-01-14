@@ -1,0 +1,110 @@
+li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+}
+
+h1 {
+    color: rgba(0,0,0,0.85);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #999;
+    padding: 4px 6px;
+    outline: none;
+}
+
+section.input-wrapper {
+    height: 75%;
+    display: block;
+    padding: 0;
+    margin: 0px 10%;
+    /*border: solid red;*/
+}
+
+form {
+    margin: 0;
+}
+
+div.input-column {
+    margin: 0px 0%;
+    padding: 0;
+    /*border: solid;*/
+    height: 100%;
+    width: 40%;
+    display: inline-block;
+}
+
+div.input-column.right {
+    float: right;
+    margin-left: 5%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    padding: 7px;
+}
+
+.dropdown-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 25px;
+    height: 120px;
+    width: 100%;
+    background-color: #EEE;
+    z-index: 1;
+    display: none;
+}
+
+.dropdown-item {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #DDD;
+}
+
+.plus-icon {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+ul.append-student {
+    position: relative;
+}
+
+button.append-student {
+    position: absolute;
+    left: -70px;
+    top: 0;
+    background-color: #ff9800;
+}
+
+/**************************************
+
+/* Hide HTML5 Up and Down arrows. */
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}

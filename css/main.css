@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    background-color: #CCC;
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    border: none;
+    color: #FFF;
+    width: 10vw;
+    height: 7vh;
+    cursor: pointer;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+a[href*="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_paragondata&utm_content=footer_img"] {
+    display: none;
+}
+
+a[href*="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website_{$app['name']}&utm_content=footer_img"] {
+    display: none;
+}
+
+img[src*="https://cloud.githubusercontent.com/assets/23024110/20663010/9968df22-b55e-11e6-941d-edbc894c2b78.png"] {
+    display: none;
+}
+
+img[src*="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}

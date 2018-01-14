@@ -1,0 +1,123 @@
+<!------------------------------------------
+
+Students Page
+... password protected through js cookie
+
+2 parts: header + iframe for data retrieval
+
+-------------------------------------------->
+
+
+<html>
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/current_list.css">
+    <link rel="stylesheet" type="text/css" href="../css/action_button.css">
+    
+    <title>Students</title>
+    
+    <!----- Roboto Font ------>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <div id="document" class="" style="position:fixed;height:100vh;width:100%;opacity:0;z-index:-10"></div>
+<main>
+    
+    
+    <!------------ HEADER ---------------->
+    <header>
+        <a href="../"><img src="../img/home.svg" alt="Home"></a>
+        <h1>Students</h1>
+        <h1 style="font-size: 1.5rem"><a class="link" href="../sponsors/">(go to sponsors)</a></h1>
+        
+        <!-- Filter Sponsors -->
+        <div class="filter"><span>FILTER</span>
+        <ul class="hide">
+            <li><a href="filter_students.php?sort=date">Date Added</a></li>
+            <li><a href="filter_students.php?sort=alpha">Alphabetical</a></li>
+            <li><a href="filter_students.php?sort=amount">Amount Given</a></li>
+            <li><a href="filter_students.php?sort=archived">Archived</a></li>
+        </ul></div>
+        <!---------------------->
+    </header>
+    <!------------------------------------>
+    
+    
+    <!------------ RETRIEVAL ------------>
+    <section class="retrieve">
+        <iframe src="retrieve_students.php"></iframe>
+    </section>
+    <!------------------------------------>
+    
+    
+    <!----------- ACTION MENU ------------>
+    <div class="floaty">
+    <ul class="floaty-list">
+      <li class="floaty-list-item" id="new-sponsor">
+        <span class="floaty-list-item-label">New Sponsor</span>
+        <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon"><!-- SPONSOR -->
+      </li>
+        <li class="floaty-list-item" id="new-student">
+        <span class="floaty-list-item-label">New Student</span>
+        <img src="../img/new-student.svg" class="absolute-center icon"><!-- STUDENT -->
+      </li>
+    </ul>
+    <div class="floaty-btn" id="new-donation">
+      <span class="floaty-btn-label">New Donation</span>
+        <img src="../img/new.svg" class="floaty-btn-icon floaty-btn-icon-plus absolute-center"><!-- NEW.SVG -->
+        <img src="../img/new.svg" class="floaty-btn-icon floaty-btn-icon-create absolute-center icon"><!-- NEW DONATION -->
+    </div>
+    </div>
+    <!------------------------------------>
+        
+    
+</main>
+
+<!--------- NEW DONATION WINDOW ------------>
+    
+<section class="window donation hide">
+<div class="window">
+    <img src="../img/close.svg" class="close">
+    <iframe src="../new-donation.php?location=iframe"></iframe>
+</div>
+</section>
+    
+<!---------------------------------------->
+    
+<!--------- NEW STUDENT WINDOW ------------>
+    
+<section class="window student hide">
+<div class="window">
+    <img src="../img/close.svg" class="close">
+    <iframe src="new-student.php?location=iframe"></iframe>
+</div>
+</section>
+    
+<!---------------------------------------->
+
+<!--------- NEW SPONSOR WINDOW ------------>
+    
+<section class="window sponsor hide">
+<div class="window">
+    <img src="../img/close.svg" class="close">
+    <iframe src="../sponsors/new-sponsor.php?location=iframe"></iframe>
+</div>
+</section>
+    
+<!---------------------------------------->
+
+
+<!---------- js and jquery ---------->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../js/password.js"></script> <!-- password protection -->
+<script src="../js/action_button.js"></script> <!-- action button -->
+<script src="../js/filter.js"></script> <!-- filter sponsors -->
+    
+</body>
+</html>
