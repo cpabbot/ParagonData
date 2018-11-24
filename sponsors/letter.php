@@ -73,7 +73,7 @@ Sponsor Letter (customized with php)
             border: solid 1px;
         }
         #top-space {
-            height: 1in;
+            height: 1.5in;
         }
         span.right {
             display: block;
