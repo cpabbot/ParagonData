@@ -1,6 +1,6 @@
 <!------------------------------------------
 
-Students Page
+Sponsors Page
 ... password protected through js cookie
 
 2 parts: header + iframe for data retrieval
@@ -14,11 +14,12 @@ Students Page
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/beta.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/current_list.css">
     <link rel="stylesheet" type="text/css" href="../css/action_button.css">
     
-    <title>Students</title>
+    <title>Data</title>
     
     <!----- Roboto Font ------>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
@@ -35,40 +36,50 @@ Students Page
         <a href="../"><img src="../img/home.svg" alt="Home"></a>
         
         <div class="nav">
-            <a class="link"><img src="../img/new-student.svg" style="position: relative"><span class="nav-item active">STUDENTS</span></a>
-            <a href="../sponsors/" class="link"><img src="../img/new-sponsor.svg" style="position: relative"><span class="nav-item">SPONSORS</span></a>
+            <a class="link"><img src="../img/new-sponsor.svg" style="position: relative"><span class="nav-item active">SPONSORS</span></a>
+            <a href="../students/" class="link"><img src="../img/new-student.svg" style="position: relative"><span class="nav-item">STUDENTS</span></a>
         </div>
         
         <!-- Filter Sponsors -->
         <div class="filter"><span>FILTER</span>
         <ul class="hide">
-            <li><a href="filter_students.php?sort=date">Date Added</a></li>
-            <li><a href="filter_students.php?sort=alpha">Alphabetical</a></li>
-            <li><a href="filter_students.php?sort=amount">Amount Given</a></li>
-            <li><a href="filter_students.php?sort=archived">Archived</a></li>
+            <li><a href="filter_sponsors.php?sort=date">Oldest to Newest</a></li>  <!-- Date Added -->
+            <li><a href="filter_sponsors.php?sort=alpha">Alphabetical</a></li>
+            <li><a href="filter_sponsors.php?sort=alphayear">Specific Year <br>- Alphabetically -</a></li>  <!-- Alpha - year -->
+            <li><a href="filter_sponsors.php?sort=amount">Specific Year <br>- By Amount Given -</a></li>  <!-- Amount Given -->
+            <li><a href="filter_sponsors.php?sort=archived">Archive</a></li>
         </ul></div>
         <!---------------------->
     </header>
     <!------------------------------------>
     
     
-    <!------------ RETRIEVAL ------------>
     <section class="retrieve">
-        <iframe src="retrieve_students.php"></iframe>
-    </section>
+        <!------------ RETRIEVAL STUDENTS ------------>
+        <section class="retrieve-item retrieve-students">
+            <iframe src="../students/retrieve_students.php"></iframe>
+        </section>
+        <!------------------------------------>
+
+        <!------------ RETRIEVAL SPONSORS ------------>
+        <section class="retrieve-item retrieve-sponsors">
+            <iframe src="../sponsors/retrieve_sponsors.php"></iframe>
+        </section>
     <!------------------------------------>
+    </section>
+    
     
     
     <!----------- ACTION MENU ------------>
     <div class="floaty">
     <ul class="floaty-list">
-      <li class="floaty-list-item" id="new-sponsor">
-        <span class="floaty-list-item-label">New Sponsor</span>
-        <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon"><!-- SPONSOR -->
-      </li>
         <li class="floaty-list-item" id="new-student">
         <span class="floaty-list-item-label">New Student</span>
         <img src="../img/new-student.svg" class="absolute-center icon"><!-- STUDENT -->
+      </li>
+      <li class="floaty-list-item" id="new-sponsor">
+        <span class="floaty-list-item-label">New Sponsor</span>
+        <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon"><!-- SPONSOR -->
       </li>
     </ul>
     <div class="floaty-btn" id="new-donation">
@@ -98,7 +109,7 @@ Students Page
 <section class="window student hide">
 <div class="window">
     <img src="../img/close.svg" class="close">
-    <iframe src="new-student.php?location=iframe"></iframe>
+    <iframe src="../students/new-student.php?location=iframe"></iframe>
 </div>
 </section>
     
@@ -109,7 +120,7 @@ Students Page
 <section class="window sponsor hide">
 <div class="window">
     <img src="../img/close.svg" class="close">
-    <iframe src="../sponsors/new-sponsor.php?location=iframe"></iframe>
+    <iframe src="new-sponsor.php?location=iframe"></iframe>
 </div>
 </section>
     
