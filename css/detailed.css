@@ -1,8 +1,8 @@
 @media screen and (max-width: 750px) {
-    body div.left {
+    .left {
         width: calc(100% - 40px);
     }
-    body body section.info, body section.retrieve {
+    .info, .retrieve-donations {
         width: 100%;
     }
     body section.right {
@@ -14,20 +14,19 @@
     }
 }
 @media screen and (max-width: 450px) {
-    body section.retrieve div.right {
+    .retrieve-donations div.right {
         position: static;
     }
-    body h1 {
+    h1 {
         margin-left: 100px;
     }
-    body div.left {
+    .left {
         padding: 12px;
         width: calc(100% - 24px);
     }
 }
 
 body {
-    background-color: rgba(0,0,0,0);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -35,33 +34,45 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+main {
+    background-color: #ccf;
+}
+
 h2 {
     font-size: 1.5em;
     font-weight: 500;
+    color: #333;
 }
 
 .hide {
     display: none;
 }
 
-div.left {
+.card {
+/*    box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);*/
+    background-color: #fff;
+    border: solid 2px #777;
+/*    background-color: #64b5f6;*/
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.left {
     height: calc(100vh - 130px); /*exclude header + padding*/
     width: calc(70vw - 40px);
     padding: 20px;
     margin: 0;
 }
 
-section.right {
+.right {
     position: absolute;
     top: calc(20px + 90px);
     right: 20px;
     height: calc(100vh - 130px);
     width: 25vw;
-    background-color: #64b5f6;
     text-align: center;
 }
 
-div#icons {
+#icons {
     margin: auto;
     position: absolute;
     left: 0;
@@ -69,18 +80,23 @@ div#icons {
     bottom: 50px;
 }
 
-section.info {
+/************* INFO **************/
+.info {
     position: relative;
-    background-color: #64b5f6;
     /*width: calc(70vw - 40px);*/
     width: 100%;
-    height: calc(40% - 10px);
+    height: calc(35% - 10px);
     margin-bottom: 20px;
     box-sizing: border-box;
     padding: 10px 20px;
+    color: #00608d;
 }
 
-section.info .circle {
+.info h2 {
+    padding-bottom: 10px;
+}
+
+.info .circle {
     position: absolute;
     bottom: 15px;
     right: 30px;
@@ -90,36 +106,36 @@ section.info .circle {
     padding: 12px;
 }
 
-section.info .circle:hover {
+.info .circle:hover {
     background-color: #ee8700;
 }
 
-section.info span.info {
+.info span.info {
     padding-left: 10px;
 }
 
-section.retrieve {
+/************ RETRIEVE ****************/
+.retrieve-donations {
     position: relative;
-    background-color: #64b5f6;
     /*width: calc(70vw - 40px);*/
     widows: 100%;
-    height: calc(60% - 25px);
+    height: calc(65% - 25px);
     padding-top: 0px;
     overflow-y: scroll;
 }
 
-section.retrieve h2 {
+.retrieve-donations h2 {
     margin: 0;
-    padding: 10px;
+    padding: 10px 30px;
 }
 
-section.retrieve div.right {
+.rd__filter {
     position: absolute;
     right: 60px;
     top: 10px;
 }
 
-section.retrieve div.right input[type="submit"] {
+.retrieve-donations input[type="submit"] {
     background: none;
     padding: 5px 10px;
     border: none;
@@ -134,32 +150,44 @@ section.retrieve div.right input[type="submit"] {
     background-color: #ee8700;
 }
 
-div.donation-cell {
+.donation-cell {
     background-color: #FFF;
+    border: solid 1px #777;
     width: calc(100% - 70px); /* exclude padding + margin */
-    padding: 10px 25px;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 15px;
     position: relative;
     margin: 10px 10px;
 }
 
-div.donation-cell span {
+.donation-cell span {
     height: 100%;
     font-size: 1.4em;
     color: rgba(0,0,0,.75);
+    display: inline;
+}
+.donation-cell a {
+    color: rgba(0,0,0,.75);
+    text-decoration: none;
+    outline: none;
+}
+.donation-cell a:hover {
+    color: #00608d;
 }
 
-div.right-in-cell {
+.right-in-cell {
     position: absolute;
-    padding: 10px 0;
-    right: 25px;
-    top: 0;
+    display: inline;
+    right: 45px;
+    font-size: 0.7em;
 }
 
-div.right-in-cell img {
-    padding-top: 2px;
+.donation-cell img {
+    position: absolute;
+    right: 10px;
+    height: 16px;
+    top: 12px;
 }
 
-.card {
-    box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
+/****************************************/

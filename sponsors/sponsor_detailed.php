@@ -104,13 +104,13 @@ Detailed Sponsor Page
     <section class="info card">
         <form id="submit-info-form" method="post" action="update_info.php">
         
-        <h2 style="margin:0">Basic Info</h2>
+        <h2 style="margin:0">BASIC INFO</h2>
         <span>Name: <span class="info"><?php echo $sponsor_name ?></span><input name="name" class="update-info hide"></span><br>
         <span>Email: <span class="info"><?php echo $email ?></span><input name="email" class="update-info hide"></span><br>
         <span>Phone: <span class="info"><?php echo $phone ?></span></span><input name="phone" type="tel" class="update-info hide"><br>
         <span>Address: <span class="info"><?php echo $address ?></span></span><input name="address" class="update-info hide"><br>
         <span>Town: <span class="info"><?php echo $town ?></span></span><p style="display:inline" class="tooltip--right" data-tooltip="Format 'town, STATE zip'"><input name="town" class="update-info hide tooltip"></p><br>
-        <span>Sponsor Contact: <span class="info"><?php echo $sponsor_contact ?></span></span><input name="contact" class="update-info hide"><br>
+        <span>Contact: <span class="info"><?php echo $sponsor_contact ?></span></span><input name="contact" class="update-info hide"><br>
             
         <input name="sponsorID" type="hidden" value="<?php echo $sponsor_ID; ?>">
         
@@ -124,15 +124,15 @@ Detailed Sponsor Page
     
         
     <!------------ RETRIEVAL ------------>
-    <section class="retrieve card">
-        <h2>Donations</h2>
+    <section class="retrieve-donations card">
+        <h2>DONATIONS</h2>
         
         <!-- Filter Donations -->
-        <div class="right">
+        <div class="rd__filter">
         <form method="post" action="filter_year.php">
             <input type="hidden" name="sponsorid" value="<?php echo $sponsor_ID?>">
             
-            Year: <p style="display:inline" class="tooltip--bottom" data-tooltip="Type a year (ex. 2017) or type 'all'"><input class="filter-donation tooltip" type="text" name="year" style="width:100px"></p>
+            Year: <p style="display:inline" class="tooltip--bottom" data-tooltip="Type a year (ex. 2017-2018) or type 'all'"><input class="filter-donation tooltip" type="text" name="year" style="width:100px"></p>
             
             <input type="submit" id="year-selector" value="Select Year">
         </form>
@@ -196,11 +196,11 @@ Detailed Sponsor Page
                 ?>
                 
                 <div class="donation-cell">
-                    <span><?php echo $studentName ?></span>
+                    <span><a href="../students/student_detailed.php?id=<?php echo $studentID?>"><?php echo $studentName ?></a></span>
                     <div class="right-in-cell">
                         <span><?php echo "($year)&nbsp&nbsp $$amount" ?></span>
-                        <a href="../delete_donation.php?sponsorid=<?php echo $sponsor_ID ?>&id=<?php echo $id ?>"><img src="../img/close-dark.svg" alt="delete"></a>
                     </div>
+                    <a href="../delete_donation.php?sponsorid=<?php echo $sponsor_ID ?>&id=<?php echo $id ?>"><img src="../img/close-dark.svg" alt="delete"></a>
                 </div>
         
                 <?php
@@ -232,7 +232,7 @@ Detailed Sponsor Page
         if( !isset($latestYear) ) { $latestYear = '0'; }
         $yearFall = substr($latestYear,0,4); // finds the year that the Robotics seasons starts (fall)
         
-        echo "<h2>Total Donated:</h2>";
+        echo "<h2>YEAR TOTALS:</h2>";
         
         while($yearFall >= 2015) {
             //get total donated in that year

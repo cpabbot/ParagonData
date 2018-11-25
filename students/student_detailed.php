@@ -91,7 +91,7 @@ Detailed Student Page
     <section class="info card">
         <form id="submit-info-form" method="post" action="update_student_info.php">
         
-        <h2 style="margin:0">Basic Info</h2>
+        <h2 style="margin:0">BASIC INFO</h2>
         <span>Name: <span class="info"><?php echo $student_name ?></span><input name="name" class="update-info hide"></span><br>
         <span>Classification: <span class="info"><?php echo $classification ?></span><p style="display:inline" class="tooltip--below" data-tooltip="Rookie, Veteran, or Retired"><input name="classification" class="update-info hide"></p></span><br>
             
@@ -107,9 +107,9 @@ Detailed Student Page
     
         
     <!------------ RETRIEVAL ------------>
-    <section class="retrieve card">
-        <h2>Funds Raised</h2>
-        <div class="right">
+    <section class="retrieve-donations card">
+        <h2>FUNDS RAISED</h2>
+        <div class="rd__filter">
             <form method="post" action="filter_year.php">
             <input type="hidden" name="studentid" value="<?php echo $student_ID?>">
             
@@ -163,6 +163,7 @@ Detailed Student Page
                 $id = $rows['ID'];
                 $sponsorID = $rows['SponsorID'];
                 $amount = $rows['Amount'];
+                $year = $rows['Year'];
 
                 //get sponsor's name
                 $sql_getSponsor = ("
@@ -176,11 +177,11 @@ Detailed Student Page
                 ?>
                 
                 <div class="donation-cell">
-                    <span><?php echo $sponsorName ?></span>
+                    <span><a href="../sponsors/sponsor_detailed.php?id=<?php echo $sponsorID?>"><?php echo $sponsorName ?></a></span>
                     <div class="right-in-cell">
-                        <span>$<?php echo $amount ?></span>
-                        <a href="../delete_donation.php?studentid=<?php echo $student_ID ?>&id=<?php echo $id ?>"><img src="../img/close-dark.svg" alt="delete"></a>
+                        <span><?php echo "($year)&nbsp&nbsp $$amount" ?></span>
                     </div>
+                    <a href="../delete_donation.php?studentid=<?php echo $student_ID ?>&id=<?php echo $id ?>"><img src="../img/close-dark.svg" alt="delete"></a>
                 </div>
         
                 <?php
@@ -206,7 +207,6 @@ Detailed Student Page
         ");
         $getLatestYear = mysqli_fetch_assoc(mysqli_query($conn, $sql_latestyear));
         $latestYear = $getLatestYear['MAX(year)'];
-        echo $latestYear;
         if( !isset($latestYear) ) { $latestYear = '0'; }
         $yearFall = substr($latestYear,0,4); // finds the year that the Robotics seasons starts (fall)
         
@@ -218,7 +218,7 @@ Detailed Student Page
         $getTotalRaisedEver = mysqli_fetch_assoc(mysqli_query($conn, $sql_totalraisedever));
         $totalRaisedEver = $getTotalRaisedEver['SUM(amount)'];
         
-        echo "<h2>Total Raised: $$totalRaisedEver</h2>";
+        echo "<h2>TOTAL RAISED: $$totalRaisedEver</h2>";
         
         while($yearFall >= 2015) {
             //get total donated in that year
