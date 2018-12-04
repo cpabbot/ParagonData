@@ -46,7 +46,7 @@ Stylesheet for action button
 li#new-student {
   background-color: #DB4437;
 }
-li#new-sponsor {
+#new-sponsor {
     background-color: #DB4437;
 }
 .floaty-list-item-label {
@@ -119,6 +119,8 @@ li#new-sponsor {
 
 .floaty-btn-download {
     background-color: #777 !important;
+    display: inline-block;
+    float: none;
 }
 
 .floaty-btn-download--detailed {
@@ -134,4 +136,22 @@ li#new-sponsor {
     position: fixed !important;
     right: 10px;
     top: 20px;
+}
+
+/* contains add student/sponsor button and export button */
+.main-action-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    box-sizing: content-box;
+}
+
+.main-action-menu #new-sponsor {
+    display: inline-block;
+    margin: 0;
+    height: 56px;
+    width: 56px;
 }

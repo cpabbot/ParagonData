@@ -5,7 +5,7 @@ body {
     width: 100%;
 }
 
-div.sponsor-cell {
+.sponsor-cell {
     background-color: #FFF;
     width: calc(100% - 250px); /* exclude padding + margin */
     padding: 15px 25px;
@@ -49,13 +49,13 @@ div.sponsor-cell {
     transition-duration: .12s;
 }
 
-div.sponsor-cell span {
+.sponsor-cell span {
     height: 100%;
     font-size: 1.4em;
     color: rgba(0,0,0,.75);
 }
 
-div.right-in-cell {
+.right-in-cell {
     position: absolute;
     /*height: 100%;*/
     margin: 0;
@@ -65,21 +65,21 @@ div.right-in-cell {
     top: 0;
 }
 
-div.right-in-cell span#year {
+.right-in-cell span#year {
     font-size: 1.2em;
 }
 
-div.right-in-cell span#total-donated {
+.right-in-cell #total-donated {
     display: inline-block;
     width: 60px;
     text-align: right;
 }
 
-div.right-in-cell img {
+.right-in-cell img {
     opacity: .8;
 }
 
-div.right-in-cell img:hover {
+.right-in-cell img:hover {
     opacity: 1;
 }
 
@@ -95,4 +95,40 @@ a {
 
 .card:hover {
     box-shadow: 0 5px 7px rgba(0,0,0,0.25), 0 2px 3px rgba(0,0,0,0.22);
+}
+
+.extra-sponsor-quicklinks {
+    display: none;
+}
+
+/************* RESPONSIVE ***************/
+@media (max-width: 800px) {
+    .sponsor-cell {
+        margin: 0 10px 5px 10px;
+        width: calc(100% - 20px - 50px);
+        border: solid 1px #777;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+    .right-in-cell {
+        font-size: 0.8em;
+    }
+    .right-in-cell #total-donated {
+        width: 50px;
+    }
+    .extra-sponsor-quicklinks {
+        display: inline-block;
+    }
+    .beneath-card {
+        display: none;
+    }
+    .floaty-btn-download--fixed {
+        display: none !important;
+    }
+    body {
+        padding-top: 80px;
+    }
+    .main-action-menu {
+        display: block !important;
+    }
 }

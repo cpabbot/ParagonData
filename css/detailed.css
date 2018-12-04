@@ -1,18 +1,4 @@
-@media screen and (max-width: 750px) {
-    .left {
-        width: calc(100% - 40px);
-    }
-    .info, .retrieve-donations {
-        width: 100%;
-    }
-    body section.right {
-        position: relative;
-        top: 0;
-        right: 0;
-        width: calc(100% - 40px);
-        margin: 0 20px;
-    }
-}
+/*
 @media screen and (max-width: 450px) {
     .retrieve-donations div.right {
         position: static;
@@ -25,6 +11,7 @@
         width: calc(100% - 24px);
     }
 }
+*/
 
 body {
     margin: 0;
@@ -191,3 +178,26 @@ h2 {
 }
 
 /****************************************/
+
+/************* RESPONSIVE ***************/
+@media screen and (max-width: 750px) {
+    .left {
+        width: calc(100% - 40px);
+        height: auto;
+    }
+    .info {
+        height: 200px;
+    }
+    .retrieve-donations {
+        height: 300px;
+    }
+    .right {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        height: auto;
+        padding-bottom: 150px;
+    }
+}
