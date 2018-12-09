@@ -90,11 +90,30 @@ if(mysqli_num_rows($result) != 0) {
         <span id="year"><?php
             echo "($latestYear)";
         ?></span>
-        <span id='total-donated' style="width:130px"><?php
+        <span id='total-donated'><?php
             echo "$$total_donated / $$requirement";
         ?></span>
-            <span style="display:inline-block;width:20px"></span>
+            
+        <div class="extra-quicklinks">
+            <!-- archive -->
+        <a id="archive-student" target="_top" href="../toggle_archive.php?type=students&id=<?php echo $sponsor_ID; ?>">
+            <?php
+            if($_SESSION['sort'] == "archived") {
+                echo "<img src='../img/edit.svg' alt='archive'>";
+            }
+            else {
+                echo "<img src='../img/done.svg' alt='archive'>";
+            }
+            ?>
+        </a>
+            <!-- delete -->
+        <?php
+            if($_SESSION['sort'] == "archived") {
+                echo "<a id='delete-student' target='_top' href='delete_student.php?id=$student_ID?>'><img src='../img/close-dark.svg' alt='delete'></a>";
+            }
+        ?>
         </div>
+            </div>
         
         <div class="beneath-card">
             <a id="archive-student" target="_top" href="../toggle_archive.php?type=students&id=<?php echo $student_ID; ?>">
@@ -133,6 +152,22 @@ else {
 </div>
 
 </form>
+<!----------------------------------->
+    
+<!------ DESKTOP ACTION MENU ----------->
+<div class="main-action-menu">
+    <!-- download -->
+        <div class="floaty-btn floaty-btn-download" onclick="document.forms['download-form'].submit();">
+            <span class="floaty-btn-label">Export</span>
+            <img src="../img/download-light.svg" class="floaty-btn-icon--download absolute-center">
+        </div>
+    <!-- new student -->
+        <div class="floaty-list-item new-element">
+            <span class="floaty-list-item-label">New Student</span>
+            <img src="../img/new-student.svg" class="floaty-btn-icon absolute-center icon">
+            <span style="width:10px"></span>
+        </div>
+</div>
 <!----------------------------------->
 
     

@@ -71,7 +71,7 @@ body {
 
 .right-in-cell #total-donated {
     display: inline-block;
-    width: 60px;
+/*    width: 50px;*/
     text-align: right;
 }
 
@@ -97,7 +97,7 @@ a {
     box-shadow: 0 5px 7px rgba(0,0,0,0.25), 0 2px 3px rgba(0,0,0,0.22);
 }
 
-.extra-sponsor-quicklinks {
+.extra-quicklinks {
     display: none;
 }
 
@@ -113,10 +113,12 @@ a {
     .right-in-cell {
         font-size: 0.8em;
     }
+/*
     .right-in-cell #total-donated {
         width: 50px;
     }
-    .extra-sponsor-quicklinks {
+*/
+    .extra-quicklinks {
         display: inline-block;
     }
     .beneath-card {

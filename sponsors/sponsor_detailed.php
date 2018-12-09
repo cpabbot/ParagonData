@@ -90,11 +90,11 @@ Detailed Sponsor Page
     
     <!------------ HEADER ---------------->
     <header>
-        <a href="../sponsors"><img src="../img/arrow-back.svg" alt="Back"></a>
+        <a onclick="window.history.back()"><img src="../img/arrow-back.svg" alt="Back"></a>
         <h1>Sponsors - <?php echo $sponsor_name ?></h1>
     </header>
     <header style="position:fixed;top:0">
-        <a href="../sponsors"><img src="../img/arrow-back.svg" alt="Back"></a>
+        <a onclick="window.history.back()"><img src="../img/arrow-back.svg" alt="Back"></a>
         <h1>Sponsors - <?php echo $sponsor_name ?></h1>
     </header>
     <!------------------------------------>

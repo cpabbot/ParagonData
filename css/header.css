@@ -31,6 +31,10 @@ header {
     z-index: 99;
 }
 
+header a {
+    cursor: pointer;
+}
+
 .nav {
     position: absolute;
     width: 100%;

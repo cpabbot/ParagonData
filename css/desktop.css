@@ -1,0 +1,32 @@
+.retrieve-item {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.retrieve-students {
+}
+
+.retrieve-sponsors {
+}
+
+/************* RESPONSIVE ***************/
+header {
+    height: 0;
+    text-align: center;
+}
+header img {
+    position: relative;
+    left: 0;
+    top: 10px;
+}
+header .nav-item {
+    color: #333;
+    padding: 0;
+    margin: 10px;
+    font-size: 1.2em;
+}
+header .filter {
+    display: none !important;
+}

@@ -77,11 +77,11 @@ Detailed Student Page
     
     <!------------ HEADER ---------------->
     <header>
-        <a href="../students"><img src="../img/arrow-back.svg" alt="Back"></a>
+        <a onclick="window.history.back()"><img src="../img/arrow-back.svg" alt="Back"></a>
         <h1>Students - <?php echo $student_name ?></h1>
     </header>
     <header style="position:fixed;top:0">
-        <a href="../students"><img src="../img/arrow-back.svg" alt="Back"></a>
+        <a onclick="window.history.back()"><img src="../img/arrow-back.svg" alt="Back"></a>
         <h1>Students - <?php echo $student_name ?></h1>
     </header>
     <!------------------------------------>

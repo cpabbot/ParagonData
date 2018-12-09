@@ -100,7 +100,7 @@ if(mysqli_num_rows($result) != 0) {
             <!-- letter -->
         <a target="_blank" href="letter.php?sponsorid=<?php echo $sponsor_ID; ?>"><img src="../img/letter.svg" alt="letter"></a>
             
-        <div class="extra-sponsor-quicklinks">
+        <div class="extra-quicklinks">
             <!-- archive -->
         <a id="archive-sponsor" target="_top" href="../toggle_archive.php?type=sponsors&id=<?php echo $sponsor_ID; ?>">
             <?php
@@ -160,7 +160,7 @@ else {
 </form>
 <!----------------------------------->
     
-<!------ BETA ACTION MENU ----------->
+<!------ DESKTOP ACTION MENU ----------->
 <div class="main-action-menu">
     <!-- download -->
         <div class="floaty-btn floaty-btn-download" onclick="document.forms['download-form'].submit();">
@@ -168,7 +168,7 @@ else {
             <img src="../img/download-light.svg" class="floaty-btn-icon--download absolute-center">
         </div>
     <!-- new sponsor -->
-        <div class="floaty-list-item" id="new-sponsor">
+        <div class="floaty-list-item new-element">
             <span class="floaty-list-item-label">New Sponsor</span>
             <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon">
         </div>
