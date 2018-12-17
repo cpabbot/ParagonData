@@ -101,6 +101,10 @@ a {
     display: none;
 }
 
+.ric-donation {
+    display: inline;
+}
+
 /************* RESPONSIVE ***************/
 @media (max-width: 800px) {
     .sponsor-cell {
@@ -132,5 +136,11 @@ a {
     }
     .main-action-menu {
         display: block !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .ric-donation {
+        display: none;
     }
 }

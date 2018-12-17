@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/retrieve.css">
     <link rel="stylesheet" type="text/css" href="../css/action_button.css">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -164,7 +164,7 @@ else {
             <img src="../img/download-light.svg" class="floaty-btn-icon--download absolute-center">
         </div>
     <!-- new student -->
-        <div class="floaty-list-item new-element">
+        <div class="floaty-list-item new-element" id="new-student" onclick="parent.openWindow('student')">
             <span class="floaty-list-item-label">New Student</span>
             <img src="../img/new-student.svg" class="floaty-btn-icon absolute-center icon">
             <span style="width:10px"></span>
@@ -174,6 +174,7 @@ else {
 
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../js/action_button.js"></script> <!-- action button -->
 <script src="../js/confirmation.js"></script> <!-- confirmation -->
 
 </body>

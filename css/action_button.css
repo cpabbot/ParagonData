@@ -43,11 +43,8 @@ Stylesheet for action button
 .floaty-list-item > img {
   border-radius: 50%;
 }
-li#new-student {
+.red-background {
   background-color: #DB4437;
-}
-#new-sponsor {
-    background-color: #DB4437;
 }
 .floaty-list-item-label {
   position: absolute;

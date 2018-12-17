@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../css/retrieve.css">
     <link rel="stylesheet" type="text/css" href="../css/action_button.css">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
 <body>
@@ -90,12 +90,14 @@ if(mysqli_num_rows($result) != 0) {
         <span id='sponsor-name'><?php echo "$sponsor_name" ?></span></a>
         
         <div class='right-in-cell'>
-        <span id="year"><?php
-            echo "($latestYear)";
-        ?></span>
-        <span id='total-donated'><?php
-            echo "$$total_donated";
-        ?></span>
+        <div class="ric-donation">
+            <span id="year"><?php
+                echo "($latestYear)";
+            ?></span>
+            <span id='total-donated'><?php
+                echo "$$total_donated";
+            ?></span>
+        </div>
             <span style="display:inline-block;width:20px"></span>
             <!-- email -->
         <a target="_blank" href="http://compose.mail.yahoo.com/?to=TO&subject=TeamParagon571Map&body="><img src="../img/email.svg" alt="email"></a>
@@ -170,7 +172,7 @@ else {
             <img src="../img/download-light.svg" class="floaty-btn-icon--download absolute-center">
         </div>
     <!-- new sponsor -->
-        <div class="floaty-list-item new-element">
+        <div class="floaty-list-item new-element" id="new-sponsor" onclick="parent.openWindow('sponsor')">
             <span class="floaty-list-item-label">New Sponsor</span>
             <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon">
         </div>
@@ -179,6 +181,7 @@ else {
 
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="../js/action_button.js"></script> <!-- action button -->
 <script src="../js/confirmation.js"></script> <!-- confirmation -->
 
 </body>

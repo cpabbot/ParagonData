@@ -19,6 +19,8 @@ Page to Add a New Donation
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat" rel="stylesheet">
     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 </head>
 <body>
     

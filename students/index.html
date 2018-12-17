@@ -11,8 +11,6 @@ Students Page
 <html>
 <head>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/current_list.css">
@@ -22,6 +20,8 @@ Students Page
     
     <!----- Roboto Font ------>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
 <body>
@@ -36,7 +36,7 @@ Students Page
         
         <div class="nav">
             <a class="link"><img src="../img/new-student.svg" style="position: relative"><span class="nav-item active">STUDENTS</span></a>
-            <a href="../sponsors/" class="link"><img src="../img/new-sponsor.svg" style="position: relative"><span class="nav-item">SPONSORS</span></a>
+            <a href="../sponsors/" class="link hideunder800px"><img src="../img/new-sponsor.svg" style="position: relative"><span class="nav-item">SPONSORS</span></a>
         </div>
         
         <!-- Filter Sponsors -->
@@ -62,11 +62,11 @@ Students Page
     <!----------- ACTION MENU ------------>
     <div class="floaty">
     <ul class="floaty-list">
-      <li class="floaty-list-item" id="new-sponsor">
+      <li class="floaty-list-item red-background" id="new-sponsor">
         <span class="floaty-list-item-label">New Sponsor</span>
         <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon"><!-- SPONSOR -->
       </li>
-        <li class="floaty-list-item" id="new-student">
+        <li class="floaty-list-item red-background" id="new-student">
         <span class="floaty-list-item-label">New Student</span>
         <img src="../img/new-student.svg" class="absolute-center icon"><!-- STUDENT -->
       </li>

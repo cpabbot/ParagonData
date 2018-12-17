@@ -74,7 +74,7 @@ header img {
     top: 24px; /* 100px height - 45 px image height = 32.5 top + bottom */
 }
 
-header div.filter {
+.filter {
     display: block;
     position: absolute;
     top: 20px;
@@ -87,7 +87,7 @@ header div.filter {
     z-index: 999
 }
 
-header div.filter span {
+.filter span {
     color:  rgba(0,0,0,.6);
     display: inline-block;
     height: auto;
@@ -141,4 +141,22 @@ header ul li a {
     width: 100%;
     display: inline-block;
     padding: 10px;
+}
+
+/************* RESPONSIVE ***************/
+@media (max-width: 800px) {
+    .hideunder800px {
+        display: none;
+    }
+    
+    .filter {
+        right: 34px;
+        width: 90px;
+        height: 40px;
+        top: 25px;
+        border-radius: 3px;
+    }
+    .filter span {
+        line-height: 40px
+    }
 }

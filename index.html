@@ -9,14 +9,14 @@ Home page for the Paragon Data site.
 <html>
 <head>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <title>Paragon Data</title>
     
     <!----- Fonts ------>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Slab" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
 <body>
@@ -26,14 +26,15 @@ Home page for the Paragon Data site.
     
     <h1>Paragon Data</h1>
     
-    <div class="link-container">
-        <a class="link link--home" href="desktop/">Desktop</a>
-        <a class="link link--home" href="students/">Students</a>
-        <a class="link link--home" href="sponsors/">Sponsors</a>
-        <br><br><br><br><br>
-        <a class="link" target="_blank" href="https://databases.000webhost.com/db_structure.php?db=id628450_paragondata&token=e175b7e9efd5fce2bda9d0fbce24d7ca">PhpMyAdmin Database (id628450_paragon, paragon571)</a>
-        <br><br><br>
-        <a class="link" target="_blank" href="data.php">View Raw Data</a>
+    <div class="home-nav">
+        <a class="link home-nav-link" href="desktop/">Desktop</a>
+        <a class="link home-nav-link" href="students/">Students</a>
+        <a class="link home-nav-link" href="sponsors/">Sponsors</a>
+    </div>
+    
+    <div class="admin-tools">
+        <a class="link admin-tool" target="_blank" href="https://databases.000webhost.com/db_structure.php?db=id628450_paragondata&token=e175b7e9efd5fce2bda9d0fbce24d7ca">PhpMyAdmin Database (id628450_paragon, paragon571)</a>
+        <a class="link admin-tool" target="_blank" href="data.php">View Raw Data</a>
     </div>
     
 </main>
