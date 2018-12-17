@@ -5,10 +5,14 @@
     float: left;
 }
 
-.retrieve-students {
-}
-
-.retrieve-sponsors {
+.desktop-new-donation {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 70px;
+    z-index: 9;
+    border: solid 3px #333;
 }
 
 /************* RESPONSIVE ***************/

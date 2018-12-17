@@ -176,6 +176,11 @@ else {
             <span class="floaty-list-item-label">New Sponsor</span>
             <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon">
         </div>
+    <!-- new donation -->
+        <div class="floaty-list-item new-element" id="new-sponsor" onclick="parent.openWindow('sponsor')">
+            <span class="floaty-list-item-label">New Sponsor</span>
+            <img src="../img/new-sponsor.svg" class="floaty-btn-icon absolute-center icon">
+        </div>
 </div>
 <!----------------------------------->
 
