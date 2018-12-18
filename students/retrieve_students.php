@@ -23,12 +23,19 @@ if(isset($_SESSION['sql--studentsort'])) {
     $sql = $_SESSION['sql--studentsort'];
 }
 else { //default
+//    $sql = ("
+//        SELECT * 
+//        FROM students
+//        WHERE archive = 0
+//        ORDER BY case when student_name='Team' then 0 else 1 end
+//    ");
     $sql = ("
-        SELECT * 
+        SELECT *
         FROM students
         WHERE archive = 0
-        ORDER BY case when student_name='Team' then 0 else 1 end
-    ");
+        ORDER BY case when student_name='Team' then 0 else 1 end,
+           student_name
+        ");
     $_SESSION['sort'] = 'other';
 }
 

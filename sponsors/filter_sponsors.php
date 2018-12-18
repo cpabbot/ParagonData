@@ -13,7 +13,7 @@ if(isset($_GET['sort'])) {
     $sort = $_GET['sort'];
 }
 else {
-    $sort = 'date';
+    $sort = 'alpha';
 };
 
 // Sort SQL

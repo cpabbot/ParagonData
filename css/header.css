@@ -151,6 +151,7 @@ header ul li a {
     
     .filter {
         right: 34px;
+        right: 50px;
         width: 90px;
         height: 40px;
         top: 25px;
@@ -158,5 +159,11 @@ header ul li a {
     }
     .filter span {
         line-height: 40px
+    }
+    .filter li {
+        padding: 0;
+    }
+    .filter a {
+        padding: 10px 2px;
     }
 }
